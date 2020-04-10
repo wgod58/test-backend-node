@@ -1,0 +1,83 @@
+{
+  "name": "test-backend-node",
+  "version": "0.3.0",
+  "description": "A sample Node.js app using Express 4",
+  "engines": {
+    "node": "12.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist --source-maps --copy-files",
+    "start": "npx babel-node ./src/index.js",
+    "run:watch": "nodemon --exec yarn start",
+    "lint": "esw --ignore-path .gitignore .",
+    "lint:watch": "npm run lint -- --watch",
+    "lint:fix": "eslint --fix \"./src/**/*.js\" "
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.9.2",
+    "aws-sdk": "^2.501.0",
+    "body-parser": "^1.18.1",
+    "compression": "^1.7.0",
+    "cors": "^2.8.4",
+    "dotenv": "^8.0.0",
+    "express": "^4.15.2",
+    "express-healthcheck": "^0.1.0",
+    "express-ws": "^4.0.0",
+    "helmet": "^3.20.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "morgan": "^1.8.2",
+    "mysql2": "^1.7.0",
+    "node-cache": "^5.1.0",
+    "sequelize": "^5.14.0",
+    "swagger-ui-express": "^4.1.2",
+    "version-healthcheck": "^0.1.2",
+    "winston": "^3.2.0",
+    "winston-daily-rotate-file": "^3.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@types/jest": "^24.9.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-istanbul": "^6.0.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "chakram": "^1.5.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-watch": "^6.0.0",
+    "jest": "^25.1.0",
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.1",
+    "nyc": "^14.1.1",
+    "prettier": "^1.18.2",
+    "regenerator-runtime": "^0.13.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "resolutions": {
+    "babel-core": "7.0.0-bridge.0"
+  },
+  "license": "MIT"
+}
